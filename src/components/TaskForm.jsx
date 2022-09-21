@@ -15,19 +15,27 @@ function TaskForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input onChange={(e) => setTitle(e.target.value)}
-                value={title}
-                autoFocus
-                placeholder="Type your Taks" />
-            <br/>
-            <textarea onChange={(e) => setDescription(e.target.value)}
-                value={description}
-                placeholder="Type Description" />
-            <button>
-                Add
-            </button>
-        </form>
+        <div className='max-w-md mx-auto'>
+            <form className='bg-slate-700 px-10 mb-3' 
+                onSubmit={handleSubmit}>
+                    <h1 className='text-2xl font-bold text-white mb-3'>Create your Taks</h1>
+                <input
+                    className='bg-slate-300 p-3 w-full mb-2' 
+                    onChange={(e) => setTitle(e.target.value)}
+                    value={title}
+                    autoFocus
+                    placeholder="Type your Taks" />
+                <textarea 
+                    className='bg-slate-300 p-3 w-full mb-2' 
+                    onChange={(e) => setDescription(e.target.value)}
+                    value={description}
+                    placeholder="Type Description" />
+                <button
+                    className='bg-gray-600 hover:bg-gray-400 text-gray-300 px-3 py-1 rounded-sm'>
+                    Add
+                </button>
+            </form>
+        </div>
   )
 }
 
